@@ -5,4 +5,3 @@
 extern bool ConfirmOperation();
 extern void askPassword();
 extern void SetConsultation();
-extern void LecturerName();
