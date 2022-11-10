@@ -3,6 +3,7 @@
 #include "Variables.h"
 
 int main() {
+    cout << "Test" << endl;
     int choice;
     string password;
     cout << "Please enter your ID: " << endl;
