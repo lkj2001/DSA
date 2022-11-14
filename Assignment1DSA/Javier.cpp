@@ -2,84 +2,84 @@
 
 using namespace std;
 
-struct Consultationslot;
+struct ConsultationSlot;
 //lecturer structure
 struct Teacher
 {
 	string name;
-	Consultationslot* consultationslot;
+	ConsultationSlot* consultationSlot;
 };
 
-struct Consultationslot
+struct ConsultationSlot
 {
 	int day, month, hour;
-	string studentname;
-	Consultationslot* next;
+	string studentName;
+	ConsultationSlot* next;
 };
 
 //currently hardcoded and only works for 5 teachers
-Teacher sccm[5] = { {"bridget", NULL}, {"ken yap", NULL}, {"ze ren", NULL}, {"chan yt", NULL}, {"johann", NULL} };
+Teacher sccm[5] = { {"Bridget", NULL}, {"Ken Yap", NULL}, {"Ze Ren", NULL}, {"Chan YT", NULL}, {"Johann", NULL} };
 
-void setconsultationslot(int teachid)
+void setConsultationSlot(int teachId)
 {
 	//need more validation with current date (ex: able to set for the next 3 days only), currently one can set whenever
-	int tempmonth, tempday, temphour;
-	Consultationslot* newslot = new Consultationslot;
+	int tempMonth, tempDay, tempHour;
+	ConsultationSlot* newSlot = new ConsultationSlot;
 	do {
-		cout << "input month : ";
-		cin >> tempmonth;
-		if (tempmonth < 1 || tempmonth > 12)
+		cout << "Input month : ";
+		cin >> tempMonth;
+		if (tempMonth < 1 || tempMonth > 12)
 		{
-			cout << "invalid month. please re-enter\n";
+			cout << "Invalid month. Please re-enter\n";
 		}
-	} while (tempmonth < 1 || tempmonth > 12);
+	} while (tempMonth < 1 || tempMonth > 12);
 
 	//need more validation as now we can input date like 31/2 which is never xdd
 	do {
-		cout << "input day : ";
-		cin >> tempday;
-		if (tempday < 1 || tempday > 31)
-			cout << "invalid day. please re-enter\n";
-	} while (tempday < 1 || tempday > 31);
+		cout << "Input day : ";
+		cin >> tempDay;
+		if (tempDay < 1 || tempDay > 31)
+			cout << "Invalid day. Please re-enter\n";
+	} while (tempDay < 1 || tempDay > 31);
 
 	//allows from 08:00 to 18:00
 	do {
-		cout << "input hour : ";
-		cin >> temphour;
-		if (temphour < 8 || temphour > 18)
-			cout << "invalid hour. please re-enter\n";
-	} while (temphour < 8 || temphour > 18);
+		cout << "Input hour : ";
+		cin >> tempHour;
+		if (tempHour < 8 || tempHour > 18)
+			cout << "Invalid hour. Please re-enter\n";
+	} while (tempHour < 8 || tempHour > 18);
 
-	newslot->day = tempday;
-	newslot->month = tempmonth;
-	newslot->hour = temphour;
-	newslot->studentname = "no current student";
+	newSlot->day = tempDay;
+	newSlot->month = tempMonth;
+	newSlot->hour = tempHour;
+	newSlot->studentName = "No current student";
 
-	cout << "\nselected date are " << newslot->day << "/" << newslot->month << "\t" << newslot->hour << ":00" << "\n\n";
+	cout << "\nSelected date are " << newSlot->day << "/" << newSlot->month << "\t" << newSlot->hour << ":00" << "\n\n";
 	//using push system for now, later probably change to sort by date and hour and stuff
-	newslot->next = sccm[teachid].consultationslot;
-	sccm[teachid].consultationslot = newslot;
+	newSlot->next = sccm[teachId].consultationSlot;
+	sccm[teachId].consultationSlot = newSlot;
 }
 
-void showconsultationslot(int teachid)
+void showConsultationSlot(int teachId)
 {
-	Teacher temp = sccm[teachid];
-	cout << sccm[teachid].name << "\tavailablle slots are \n\n";
-	while (sccm[teachid].consultationslot != NULL) {
-		cout << sccm[teachid].consultationslot->day << "/" << sccm[teachid].consultationslot->month << "\t" << sccm[teachid].consultationslot->hour << ":00" << endl;
-		sccm[teachid].consultationslot = sccm[teachid].consultationslot->next;
+	Teacher temp = sccm[teachId];
+	cout << sccm[teachId].name << "\tAvailablle slots are \n\n";
+	while (sccm[teachId].consultationSlot != NULL) {
+		cout << sccm[teachId].consultationSlot->day << "/" << sccm[teachId].consultationSlot->month << "\t" << sccm[teachId].consultationSlot->hour << ":00" << endl;
+		sccm[teachId].consultationSlot = sccm[teachId].consultationSlot->next;
 	}
-	sccm[teachid] = temp;
+	sccm[teachId] = temp;
 }
 
 int main()
 {
 	//for testing purpose, there are no teacherid yet, so use the array index to determine what teacher's u want to show and to add slots
-	setconsultationslot(0);
-	setconsultationslot(0);
-	showconsultationslot(0);
-	setconsultationslot(1);
-	showconsultationslot(0);
-	showconsultationslot(1);
+	setConsultationSlot(0);
+	setConsultationSlot(0);
+	showConsultationSlot(0);
+	setConsultationSlot(1);
+	showConsultationSlot(0);
+	showConsultationSlot(1);
 
 }
