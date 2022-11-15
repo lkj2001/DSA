@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="askPassword.cpp" />
     <ClCompile Include="ConfirmOperation.cpp" />
+    <ClCompile Include="Javier.cpp" />
     <ClCompile Include="LecturerName.cpp" />
     <ClCompile Include="SetConsultation.cpp" />
     <ClCompile Include="Source.cpp" />

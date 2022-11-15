@@ -82,4 +82,6 @@ int main()
 	showConsultationSlot(0);
 	showConsultationSlot(1);
 
+	cout << "Test" << endl;
+
 }
