@@ -1,2 +1,5 @@
 ﻿  LecturerName.cpp
-  Assignment1DSA.vcxproj -> C:\Users\Edde\Desktop\source\repos\Assignment1DSA\x64\Debug\Assignment1DSA.exe
+  Source.cpp
+  Generating Code...
+Source.obj : error LNK2019: unresolved external symbol "void __cdecl LecturerName(void)" (?LecturerName@@YAXXZ) referenced in function main
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\x64\Debug\Assignment1DSA.exe : fatal error LNK1120: 1 unresolved externals
