@@ -2,6 +2,7 @@
 #include "Functions.h"
 #include "Variables.h"
 
+int teachId; //must include here as teachId does not have value inside yet
 int main() {
     int choice;
     string password;

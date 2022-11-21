@@ -1,3 +1,4 @@
-﻿LecturerName.obj : error LNK2005: "struct Teacher * sccm" (?sccm@@3PAUTeacher@@A) already defined in Javier.obj
-Source.obj : error LNK2001: unresolved external symbol "int teachId" (?teachId@@3HA)
-C:\Users\Edde\Desktop\source\repos\Assignment1DSA\x64\Debug\Assignment1DSA.exe : fatal error LNK1120: 1 unresolved externals
+﻿  Source.cpp
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(8,51): warning C4042: 'teachId': has bad storage class
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(9,52): warning C4042: 'teachId': has bad storage class
+  Assignment1DSA.vcxproj -> C:\Users\Edde\Desktop\source\repos\Assignment1DSA\x64\Debug\Assignment1DSA.exe

@@ -27,9 +27,6 @@
     <ClCompile Include="Javier.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="LecturerName.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHead.h">
@@ -39,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Variables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LecturerName.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

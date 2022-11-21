@@ -2,15 +2,15 @@
 #include "Variables.h"
 
 
-struct ConsultationSlot;
+extern struct ConsultationSlot;
 //lecturer structure
-struct Teacher
+extern struct Teacher
 {
 	string name;
 	ConsultationSlot* consultationSlot;
 };
 
-struct ConsultationSlot
+extern struct ConsultationSlot
 {
 	int day, month, hour;
 	string studentName;

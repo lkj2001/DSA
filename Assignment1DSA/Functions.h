@@ -5,5 +5,5 @@
 
 extern bool confirmOperation();
 extern void askPassword();
-extern void setConsultationSlot(int teachId);
-extern void showConsultationSlot(int teachId);
+extern void setConsultationSlot(extern int teachId);
+extern void showConsultationSlot(extern int teachId);
