@@ -3,7 +3,6 @@
 #include "Variables.h"
 
 int main() {
-    cout << "Test" << endl;
     int choice;
     string password;
     cout << "Please enter your ID: " << endl;
@@ -26,7 +25,6 @@ int main() {
         //Only input 10-20
     {
         cout << "------- Lecturer -------" << endl;
-        LecturerName();
         cout << endl;
         cout << "1. Set Available Slots" << endl;
         cout << "2. View Consultation Booked" << endl;
@@ -35,7 +33,11 @@ int main() {
         cin >> choice;
         switch (choice)
         {
-        case 1: SetConsultation();
+        case 1: setConsultationSlot(teachId);
+
+        case 2: showConsultationSlot(teachId);
+
+        case 3: exit(0);
         }
     }
     else if (memberID > 99 && memberID < 1000) //100-999

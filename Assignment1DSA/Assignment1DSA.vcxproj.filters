@@ -24,14 +24,11 @@
     <ClCompile Include="ConfirmOperation.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="SetConsultation.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LecturerName.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="Javier.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LecturerName.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

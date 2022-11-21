@@ -1,24 +1,6 @@
-#include <iostream>
-
-using namespace std;
-
-struct ConsultationSlot;
-//lecturer structure
-struct Teacher
-{
-	string name;
-	ConsultationSlot* consultationSlot;
-};
-
-struct ConsultationSlot
-{
-	int day, month, hour;
-	string studentName;
-	ConsultationSlot* next;
-};
-
-//currently hardcoded and only works for 5 teachers
-Teacher sccm[5] = { {"Bridget", NULL}, {"Ken Yap", NULL}, {"Ze Ren", NULL}, {"Chan YT", NULL}, {"Johann", NULL} };
+#include "CommonHead.h"
+#include "Functions.h"
+#include "LecturerName.h"
 
 void setConsultationSlot(int teachId)
 {
@@ -72,16 +54,16 @@ void showConsultationSlot(int teachId)
 	sccm[teachId] = temp;
 }
 
-int main()
-{
-	//for testing purpose, there are no teacherid yet, so use the array index to determine what teacher's u want to show and to add slots
-	setConsultationSlot(0);
-	setConsultationSlot(0);
-	showConsultationSlot(0);
-	setConsultationSlot(1);
-	showConsultationSlot(0);
-	showConsultationSlot(1);
-
-	cout << "Test" << endl;
-
-}
+//int main()
+//{
+//	//for testing purpose, there are no teacherid yet, so use the array index to determine what teacher's u want to show and to add slots
+//	setConsultationSlot(0);
+//	setConsultationSlot(0);
+//	showConsultationSlot(0);
+//	setConsultationSlot(1);
+//	showConsultationSlot(0);
+//	showConsultationSlot(1);
+//
+//	
+//
+//}
