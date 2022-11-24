@@ -6,15 +6,15 @@ extern struct BookedSlot;
 //students structure
 extern struct Student
 {
-	extern int id;
-	extern string name, password;
-	extern BookedSlot* bookedSlot;
-	extern Student* nxtStudent;
+	int id;
+	string name, password;
+	BookedSlot* bookedSlot;
+	Student* nxtStudent;
 };
 
 extern struct BookedSlot
 {
-	extern int day, month, hour;
-	extern string studentName;
-	extern BookedSlot* next;
+	int day, month, hour;
+	string studentName;
+	BookedSlot* next;
 };
