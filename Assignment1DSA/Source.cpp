@@ -1,9 +1,14 @@
 #include "CommonHead.h"
 #include "Functions.h"
 #include "Variables.h"
+#include "StudentsName.h"
+
 
 int teachId; //must include here as teachId does not have value inside yet
+Student* studentHead = NULL;
 int main() {
+
+    
     int choice;
     string password;
     cout << "Please enter your ID: " << endl;
@@ -21,6 +26,10 @@ int main() {
         cout << "5. Exit" << endl;
         cout << "Enter the number you would like to proceed: " << endl;
         cin >> choice;
+        switch (choice)
+        {
+        case 4: addStudent(studentHead);
+        }
     }
     else if (memberID > 9 && memberID < 100) //10-99 
         //Only input 10-20

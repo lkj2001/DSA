@@ -2,29 +2,9 @@
 #include "StudentsName.h" //not sure how to do this, explain later
 #include "Variables.h" //nedd the curStudentCount
 
-
-extern struct BookedSlot;
-//students structure
-extern struct Student
-{
-	int id;
-	string name, password;
-	BookedSlot* bookedSlot;
-	Student* nxtStudent;
-};
-
-extern struct BookedSlot
-{
-	int day, month, hour;
-	string studentName;
-	BookedSlot* next;
-};
-
-Student* studentHead = NULL; //this is needed to be declared as soon as the program starts in "int main()"
-
 //can hardcode some students in
 //to immediately have students, do addingStudent(studentHead, *insert desired name*, *insert desired Password*)
-Student* addingStudent(Student* head, string name, string pass)
+Student* studentList(Student* head, string name, string pass)
 {
 	Student* newStudent = new Student;
 	newStudent->id = 100 + curStudentCount;
@@ -37,7 +17,7 @@ Student* addingStudent(Student* head, string name, string pass)
 }
 
 //to add the students with cin
-Student* addStudent(Student* head)
+void addStudent(Student* &head)
 {
 	string name, pass, confirmPass;
 	int decision = 0; //for later on
@@ -63,9 +43,9 @@ Student* addStudent(Student* head)
 			confirm = toupper(confirm);
 			if (confirm == 'Y')
 			{
-				head = addingStudent(head, name, pass);
+				head = studentList(head, name, pass);
 				cout << "Student added Succesfully :)" << endl;
-				return head;
+				//return head;
 			}
 			else if (confirm == 'N')
 			{
@@ -84,7 +64,7 @@ Student* addStudent(Student* head)
 				cout << "Please input either Y or N" << endl;
 		} while (confirm != 'Y' && confirm != 'N');
 	} while (decision == 1);
-	return head;
+	//return head;
 }
 
 //This will be deleted later, for now, its to check whether the students data got in or not, and it also shows password which is weird XD

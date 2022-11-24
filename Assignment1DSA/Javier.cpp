@@ -54,16 +54,3 @@ void showConsultationSlot(int teachId)
 	sccm[teachId] = temp;
 }
 
-//int main()
-//{
-//	//for testing purpose, there are no teacherid yet, so use the array index to determine what teacher's u want to show and to add slots
-//	setConsultationSlot(0);
-//	setConsultationSlot(0);
-//	showConsultationSlot(0);
-//	setConsultationSlot(1);
-//	showConsultationSlot(0);
-//	showConsultationSlot(1);
-//
-//	
-//
-//}
