@@ -1,14 +1,30 @@
 #include "CommonHead.h"
 #include "Functions.h"
 #include "Variables.h"
-#include "StudentsName.h"
 
+
+
+struct BookedSlot;
+//students structure
+struct Student
+{
+    int id;
+    string name, password;
+    BookedSlot* bookedSlot;
+    Student* nxtStudent;
+};
+
+struct BookedSlot
+{
+    int day, month, hour;
+    string studentName;
+    BookedSlot* next;
+};
 
 int teachId; //must include here as teachId does not have value inside yet
-Student* studentHead = NULL;
-int main() {
 
-    
+int main() {
+    Student* studentHead = NULL;
     int choice;
     string password;
     cout << "Please enter your ID: " << endl;
@@ -28,7 +44,7 @@ int main() {
         cin >> choice;
         switch (choice)
         {
-        case 4: addStudent(studentHead);
+        case 4: studentList(studentHead, "Kang Jian", "123456");
         }
     }
     else if (memberID > 9 && memberID < 100) //10-99 

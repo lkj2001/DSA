@@ -2,4 +2,4 @@
 
 extern int memberID;
 extern int teachId;
-extern int curStudentCount = 0;
+extern int curStudentCount;
