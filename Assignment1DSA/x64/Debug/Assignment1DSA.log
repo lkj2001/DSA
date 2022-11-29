@@ -1,4 +1,10 @@
 ﻿  Source.cpp
-C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(8,51): warning C4042: 'teachId': has bad storage class
-C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(9,52): warning C4042: 'teachId': has bad storage class
-  Assignment1DSA.vcxproj -> C:\Users\Edde\Desktop\source\repos\Assignment1DSA\x64\Debug\Assignment1DSA.exe
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\StudentsName.h(5,25): warning C4091: 'extern ': ignored on left of 'BookedSlot' when no variable is declared
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\StudentsName.h(13,2): warning C4091: 'extern ': ignored on left of 'Student' when no variable is declared
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\StudentsName.h(20,2): warning C4091: 'extern ': ignored on left of 'BookedSlot' when no variable is declared
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(9,51): warning C4042: 'teachId': has bad storage class
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Functions.h(10,52): warning C4042: 'teachId': has bad storage class
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Source.cpp(10,1): error C2011: 'Student': 'struct' type redefinition
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\StudentsName.h(7): message : see declaration of 'Student'
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Source.cpp(18,1): error C2011: 'BookedSlot': 'struct' type redefinition
+C:\Users\Edde\Desktop\source\repos\Assignment1DSA\Assignment1DSA\Source.cpp(7): message : see declaration of 'BookedSlot'

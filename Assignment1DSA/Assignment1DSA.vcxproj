@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddStudents.cpp" />
     <ClCompile Include="askPassword.cpp" />
     <ClCompile Include="ConfirmOperation.cpp" />
     <ClCompile Include="Javier.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="CommonHead.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="LecturerName.h" />
+    <ClInclude Include="StudentsName.h" />
     <ClInclude Include="Variables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
